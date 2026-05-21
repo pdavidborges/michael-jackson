@@ -1,0 +1,109 @@
+/*
+SELETOR{
+    propriedade:valor;
+}
+*/
+
+/*Seletor ALL (todos os elementos selecionados)*/
+*{
+    margin: 0;
+}
+
+body{
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: "Barlow", sans-serif;
+}
+
+.fundo{
+    background-color: black;
+    background-image: url(img/background.webp);    
+    background-size: cover;
+    background-position: top center;
+    width: 100%; /*largura*/
+    height: 100vh; /*View Height -> Unidade de medida baseada na altura do navegador*/   
+    
+    display: flex;
+    align-items: center; /*verticalmente centralizado*/
+    justify-content: center; /*horizontalmente centralizado*/
+}
+
+.conteudo{
+    width: 96%;
+    max-width: 1259px;
+    
+    height: auto;
+        
+    display: flex;    /*Habilita o uso do flexbox*/
+    align-items: center; /*alinhamento vertical*/
+    column-gap: 24px; /*espaço entre as colunas*/
+
+    color: #FFFFFF; /*cor do texto*/
+}
+
+.imagem{
+    /*sombra horizontal, vertical, suavidade, cor*/
+    box-shadow: 5px 5px 20px black;
+}
+
+h1{
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+h2{    
+    font-size: 24px;
+    margin-top: 26px;
+    margin-bottom: 12px;
+}
+
+p{
+    font-size: 22px;
+}
+
+.genero{
+    font-size: 18px;
+}
+
+/*selecionando o strong que está dentro do .genero*/
+.genero strong{
+    color: #00F2FF;
+}
+
+a{
+    color: #FFFFFF;        
+    display: inline-block;
+    margin-top: 48px;
+    text-decoration: none; /*retira o sublinhado do link*/
+    font-size: 20px;
+
+    padding: 18px 60px; /*vertical (top/bottom) horizontal (left/right)*/
+    /*padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 60px;
+    padding-right: 60px;*/
+
+    border-radius: 10px;
+    border: 1px #FFFFFF solid;
+    /*border-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;*/
+}
+
+/*ao passar o mouse*/
+a:hover{
+    background-color: rgba(0, 0, 0, 0.50);
+    color: #00F2FF;
+    border-color: #00F2FF;
+}
+
+
+/*Condição para alterar o projeto mediante à largura da tela*/
+
+/*Para telas com largura de até 780px*/
+@media (max-width: 780px){
+
+    .imagem{
+        display: none;
+    }
+            
+}
